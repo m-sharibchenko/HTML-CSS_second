@@ -1,0 +1,129 @@
+.about-page {
+    padding: 70px 140px;
+    width: 100vw;
+}
+
+.about-page__title {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    position: relative;
+    padding-bottom: 16px;
+    margin-bottom: 50px;
+}
+
+.about-page__title::after {
+    content: '';
+    position: absolute;
+    background: #00A4E5;
+    width: 50px;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.about-page__description {
+    display: grid;
+    grid-gap: 70px;
+    grid-template-columns: repeat(auto-fit, minmax(470px, 1fr));
+    justify-content: center;
+    align-items: center;
+}
+
+.about-page__info {
+    display: flex;
+    flex-direction: column;
+}
+
+.about-page__info-title {
+    margin-bottom: 30px;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 27px;
+}
+
+.about-page__info-title span {
+    color: #00A4E5;
+}
+
+.about-page__info-main {
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.about-page__abilities {
+    /*!*height: 80%;*! смещаются вниз, но не уменьшаются в размерах*/
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    align-items: flex-end;
+}
+
+.about-page__ability {
+    position: relative;
+}
+
+.about-page__ability-img {
+    display: block;
+    width: 100%;
+}
+
+.about-page__ability-title {
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 800;
+    text-align: center;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    left: 15px;
+}
+
+@media (max-width: 1290px) {
+    .about-page__description{
+        grid-template-columns: repeat(auto-fit, minmax(499px, 1fr));
+        gap: 20px;
+        text-align: center;
+    }
+
+    .about-page__abilities {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        justify-content: center;
+        align-items: start;
+    }
+
+    .about-page__info {
+        padding: 0 50px;
+    }
+}
+
+@media (max-width: 860px) {
+    .about-page {
+        padding: 70px 70px;
+    }
+
+    .about-page__abilities {
+        gap: 15px;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 180px));
+    }
+}
+
+
+@media (max-width: 640px) {
+    .about-page__description {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    .about-page__abilities {
+        gap: 15px;
+        grid-template-columns: repeat(auto-fit, minmax(50px, 180px));
+    }
+
+    .about-page__ability-title {
+        padding: 10px 10px;
+        font-size: 16px;
+    }
+}
+
