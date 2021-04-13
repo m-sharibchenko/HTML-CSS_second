@@ -1,1 +1,1 @@
-The second project on course. Using HTML, CSS (+@media), gupl
+The second project on the course. Using HTML, CSS (+@media), gupl
